@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.21)
+
+set(CMAKE_CXX_STANDARD 11)
+
+AUX_SOURCE_DIRECTORY(${PROJECT_SOURCE_DIR}/src/Base BASE)
+AUX_SOURCE_DIRECTORY(${PROJECT_SOURCE_DIR}/src/PerfTools PERFTOOLS)
+
+add_executable(Cpp main.cpp ${BASE} ${PERFTOOLS})
